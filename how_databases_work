@@ -1,0 +1,108 @@
+THIS IS HOW DATABASES WORK
+
+- Let's say we want to go watch a Real Madrid game at Santiago Bernabeu, but we are only interested
+    in watching first squad team play, not youth teams.
+
+    *You can ask yourself, how in the world  can you see the list of all Real Madrid teams
+        ** There many resources we can get the list of the teams
+
+            1) Newspaper
+            2) Friends
+            3) Website
+            4) TV
+
+        - All of them are helpful, but newspaper, friends, and tv sport-news are not up-to-date. The only source
+            is always up-to-date is the Real Madrid official website, and most likely all websites of any company/teams
+
+    * Now how the websites get updated in real time?
+        ** Well, thanks to databases, websites are pulling the most current infromation constantly from the database.
+
+            *** This is how it works
+
+                **** Website makes a request of an specific information(in this cases Real Madrid Teams) and database responds to the request.
+                **** Databases collects and stores DATA, and organize it for retrieve this DATA easier
+
+    * Where Databases used?
+        ** Databases are use in almost anything that contains information; browsers, websites (Real Madrid website, instagram,etc), cell-phones, etc.
+
+    * I am guessing your next question is, How the databases organize DATA?
+
+        ** Databases orginize and store DATA  in TABLES. Tables makes our job easier to look for and retrieve DATA that we ask for.
+        ** Databases can have many tables
+
+
+    Example:
+
+        ** Our Database's name is ' Real-MADRID-DB '
+            ** It has 3 Tables
+
+                1) First Squad
+                2) Second Squad
+                3) Youth Teams
+
+        ** Now, we are interested in REAL MADRID First Squad, How can we retrieve the information from the databases listed above?
+            *** Easy, we go to the ' Real-MADRID-DB ' database and start looking inside the ' First Squad ' table
+
+        ** Now that we know how to look for specific database and table, let look what inside ' First Squad ' table
+
+            Inside Table is known as a cell or field of data;
+            ____________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I             7       I
+            I----------------------------------------------------------------------------------------------------I
+            I    2            I           Navas                 I             Keeper              I             1       I
+            I----------------------------------------------------------------------------------------------------I
+            I    3            I          Bale                     I            Right-Wing         I            11      I
+            I____________________________________________________________I
+
+                **** Yes, what you see in Real Madrid website has not the same view as the table above.
+                **** Each cell holds different data that can be access by the website
+
+        ** Tables are also origanized in rows
+            *** Each Row represents an entire the data within each table.
+            *** We can look for id number 1, with the player, player's position, shirt-number
+
+                id                      player                               position                    number
+            ____________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I             7       I     <----Row (top to bottom)
+            I----------------------------------------------------------------------------------------------------I
+            I    2            I           Navas                 I             Keeper              I             1       I     <----Row (top to bottom)
+            I----------------------------------------------------------------------------------------------------I
+            I    3            I          Bale                     I            Right-Wing         I            11      I     <----Row (top to bottom)
+            I____________________________________________________________I
+
+                **** Each ROW are separate from the next
+
+        ** Tables are made up of colums too, which holds similar data from each separate values
+        ** Each column has a name, describing the specific data found in tha column.
+
+            *** These are the columns
+
+                id                      player                               position                    number               <----Columns (Left to right)
+             ____________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I             7       I
+            I----------------------------------------------------------------------------------------------------I
+            I    2            I           Navas                 I             Keeper              I             1       I
+            I----------------------------------------------------------------------------------------------------I
+            I    3            I          Bale                     I            Right-Wing         I            11      I
+            I____________________________________________________________I
+
+
+        ** Tables have unique identifier, which is the '    id    ', also know and lable as primary key.
+
+    * Now that we know database work, let's find something
+        ** Let find ' Navas ' inside the table above
+
+            *** Steps:
+
+                            1) Let's start looking in the ' id ' column. Find anything with the name Navas? NO!!
+                            2) Let's jump to player column. Does the column contain Navas? Pehaps!!!
+                            3) Let's look in each row to find ' Navas '. We find it!!!!
+
+                **** So we found ' Navas' in 2nd Row and in the player .
+
+    * Finaly Dabases may have many rows than columns, so it is EASIER to search in columns FIRST!!!
+
+        **Steps:
+                        1) Look left to right
+                        2) Top to Bottom
+
