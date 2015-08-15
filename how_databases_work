@@ -40,10 +40,10 @@ THIS IS HOW DATABASES WORK
                 2) Second Squad
                 3) Youth Teams
 
-        ** Now, we are interested in REAL MADRID First Squad, How can we retrieve the information from the databases listed above?
-            *** Easy, we go to the ' Real-MADRID-DB ' database and start looking inside the ' First Squad ' table
+        ** Now, we are interested in REAL MADRID First Squad, How can we retrieve the information listed above from the databases?
+            *** Easy, we go to the ' Real-MADRID-DB ' database and start looking inside the ' First_Squad ' table
 
-        ** Now that we know how to look for specific database and table, let look what inside ' First Squad ' table
+        ** Now that we know how to look for specific database and table, let look what inside ' First_Squad ' table
 
             Inside Table is known as a cell or field of data;
             _________________________________________________________________________________________________________
