@@ -1,0 +1,115 @@
+- SQL is a programming language that allow to communicate with a database.
+    *Process:
+                    - Write some SQL code, also known as, statements, code and queries, and you will get a respond from server's database.
+
+    *Process from Browser:
+        ** If you are in the browser and you want to know about Real Madrid first squad,
+            when you click a button it create a request, the browser will go get the information you want as soon as possible.
+
+            ***This is what is happening when you press the botton
+
+                     1) Browser send a request, which is in SQL code
+                     2) SQL code is send to the Server to talk to its Database
+                     3) Server sends back the result from from the its database in SQL code
+                     4) SQL code goes back to the Website with the information you requested.
+
+
+- Lets do some SQL code.
+
+    ** Our Dadabase is called Real-Madrid-DB
+    ** Out table is called 'First_Squad'
+
+    ** Here is the database table we are going to be working with
+
+                    id                      player                          position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         7          I
+            I______________________________________________________________________________________________________I
+
+
+            *** Intructions:
+                                    1)Retrieve a list of all players with id, position and number
+                                    2)Retrieve all the players players with their positions, ids and numbers
+                                    3)Retrieve the player with the id 1
+
+            *** These is the how to retrieve some data out of the database:
+                    *** In SQL we use SELECT statement.
+
+                                    **** SELECT _______   <- here we write the colums or colum we want to search
+                                            FROM ________;  <- here we write the table where the data is in
+                                                                           <- IMPORTANT- all SQL statements has to end with semicolon!!!!!!!!
+
+            *** Now, let's look at the instructions above(in line number 35)
+                    1) Let's start retrieving all the players writing SQL code/statements/queries
+
+                            SELECT players                 <-Notice, only one column was selected, so this column will contain all data from all the rows. (from the column selected)
+                            FROM First_Squad;
+
+                            The the code/statement/querie above will return these values out from the database.
+
+                                        player      <----Columns (Left to right)
+                                     ___________
+                                    I  C.Ronaldo   I         <-- rows (Top- bottom)
+                                    I------------------I
+                                    I  Navas          I
+                                    I------------------I
+                                    I   Bale            I
+                                    I___________I
+
+                            Since we did not specified what player we wanted the database gave us all the players.
+
+            *** Now, lets look at the instruction number 2, located above. (in line number 36)
+
+                    2) Let's retrieve a list of the players with their positions, ids and numbers, writing the following query:
+
+                             SELECT player, position     <-- WOW! we can select multipe columns!
+                             FROM First_Squad;
+
+                    **** Since we can SELECT multiple colums, lets do this querie instead:
+
+                            SELECT id, player, position, number
+                            FROM First_Squad;
+
+                            The query above will return all of the data inside the database
+
+                            What if we have 10000 Columns, or even 20? We don't want to type all of them to make a query, right?. So lets do the following:
+
+                    **** By writing
+
+                                SELECT *           <-- The ' asterisk ' will select all the columns.
+                                FROM movies;
+
+                            Basically, the query above is the same as the query we typed above of the query above, but with less typing.
+
+            *** What if we want to just have an specific data from the data base?
+                    **** We can use WHERE clause to filter out data, and find specific requested data.
+
+                                SELECT_____
+                                FROM_______
+                                WHERE______;   <-- Whatever we write here the query will go to the database to look for it. If it matches, it will return it to us
+
+
+            *** Now, let's look at the instructions 3 located above( in line number 37)
+                        1) Let's retrieve the player with the id 1
+
+                                SELECT player
+                                FROM First_Squad
+                                Where id = 1;
+
+                                The query above  will look at the column ' player ', it will select all rows in the ' player ' column.
+                                Than, it will look at the column ' id ' and look for number 3. IMPORTANT: The query we typed will keep searching until it goes through all the rows of the column ' id ' to make sure there is no other number 3
+
+                                Finally after it find a match, the database will return
+
+                                    C.Ronaldo
+
+            *** Let's do one more query.
+                        **** Turns out that WHERE clause can return a ' string ' of data too.
+
+                            SELECT *
+                            FROM First_Squad
+                            WHERE player = 'C.Ronaldo';  <-- Single Quotations are used around string values and selects all string characters values.
