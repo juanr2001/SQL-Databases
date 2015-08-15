@@ -1,27 +1,27 @@
 - SQL is a programming language that allow to communicate with a database.
     *Process:
-                    - Write some SQL code, also known as, statements, code and queries, and you will get a respond from server's database.
+                    - Write some SQL code, also known as, statements, code and queries, and you will get a responce from server's database.
 
     *Process from Browser:
         ** If you are in the browser and you want to know about Real Madrid first squad,
             when you click a button it create a request, the browser will go get the information you want as soon as possible.
 
-            ***This is what is happening when you press the botton
+            ***This is what is happening when you press the button
 
                      1) Browser send a request, which is in SQL code
                      2) SQL code is send to the Server to talk to its Database
-                     3) Server sends back the result from from the its database in SQL code
+                     3) Server sends back the result from its database in SQL code
                      4) SQL code goes back to the Website with the information you requested.
 
 
-- Lets do some SQL code.
+- Let's do some SQL code.
 
     ** Our Dadabase is called Real-Madrid-DB
     ** Out table is called 'First_Squad'
 
     ** Here is the database table we are going to be working with
 
-                    id                      player                          position                    number               <----Columns (Left to right)
+                    id                      player                      position                    number               <----Columns (Left to right)
              ______________________________________________________________________________________________________
             I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
             I------------------------------------------------------------------------------------------------------I
@@ -41,7 +41,7 @@
 
                                     **** SELECT _______   <- here we write the colums or colum we want to search
                                             FROM ________;  <- here we write the table where the data is in
-                                                                           <- IMPORTANT- all SQL statements has to end with semicolon!!!!!!!!
+                                                                           <- IMPORTANT- all SQL statements has to end with semi-colon!!!!!!!!
 
             *** Now, let's look at the instructions above(in line number 35)
                     1) Let's start retrieving all the players writing SQL code/statements/queries
@@ -51,14 +51,14 @@
 
                             The the code/statement/querie above will return these values out from the database.
 
-                                        player      <----Columns (Left to right)
-                                     ___________
-                                    I  C.Ronaldo   I         <-- rows (Top- bottom)
-                                    I------------------I
-                                    I  Navas          I
-                                    I------------------I
-                                    I   Bale            I
-                                    I___________I
+                                        player      <--Columns (Left to right)
+                                     ____________
+                                    I  C.Ronaldo I     <-- rows (Top- bottom)
+                                    I------------I
+                                    I  Navas     I
+                                    I------------I
+                                    I   Bale     I
+                                    I____________I
 
                             Since we did not specified what player we wanted the database gave us all the players.
 
