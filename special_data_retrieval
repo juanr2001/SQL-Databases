@@ -1,0 +1,212 @@
+- In this file, we will discuss how to retrieve special data. For example, ordered by numbers and using Coparator and Operators
+
+    *SQL allows to retrieve special data from the database.
+
+        ** If we want to get all the players ordered by their number?
+
+            *** To make this query happen, we need the ORDER BY clause - used to sort data in a specific way.
+
+                    EX:
+                            SELECT_____
+                            FROM_______
+                            ORDER BY __;    <-- this sorts data by columns.
+
+
+- Let's do some SQL code.
+
+        ** Our Dadabase is called Real-Madrid-DB
+        ** Out table is called 'First_Squad'
+
+        ** Here is the database table we are going to be working with
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+
+            *** Now, let's get the players order by their numbers. (database line 22-29)
+
+                            SELECT player
+                            FROM First_Squad
+                            ORDER BY number;     <--will ordered from smallest number to the highest number.
+
+                        ***** The query above, will return this
+
+                                                                player      <--Columns (Left to right)
+                                     ____________
+                                    I  Navas I     <-- rows (Top- bottom)
+                                    I------------I
+                                    I  Bale     I
+                                    I------------I
+                                    I   C.Ronaldo     I
+                                    I____________I
+
+
+            *** By default ORDER BY will display the data in acending order.(smallest to highest)
+            *** IMPORTANT! Using ORDER BY we will always/only get the players, not their number, in return.
+
+        ** Now let's do the opposite, using the example above(line 29)(highest to smallest)(database line 22-29)
+            *** Let's write this code now
+
+                            SELECT player
+                            FROM First_Squad
+                            ORDER_BY number DESC;
+
+
+                        ***** The query above, will return this
+
+                                                                player      <--Columns (Left to right)
+                                     ____________
+                                    I  C.Ronaldo I     <-- rows (Top- bottom)
+                                    I------------I
+                                    I  Bale     I
+                                    I------------I
+                                    I   Navas     I
+                                    I____________I
+
+            *** Using DESC will display data in decending order. (Highest to Smallest)
+            *** It will always/only return players, not their number, in return.
+
+    *What if we want to find all the players with number greater than 6 in our database?
+
+        ** We can use COMPARISON OPERATORS that can be user to specify data.
+
+                *** Here is the code we are going to user
+
+                            SELECT___
+                            FROM_____
+                            WHERE____ > ___;   <-- Here, whatever we put before the comparison is greater than what we put after the comparison sign.
+
+                *** If we use the Comparison Operator ' = ' equal. (database line 22-29)
+
+                            SELECT *
+                            FROM First_Squad
+                            WHERE number = 6;    <-- Since we do not have a number 6 in our database, we get nothing in return from this query.
+
+                *** Lets find all the players with ' > ' greater than 6 (line 74). (database line 22-29)
+
+                            SELECT *
+                            FROM First_Squad
+                            WHERE number > 6;
+
+                        ***** The query above, will return this
+
+                                                                      id                      player                      position                    number               <----Columns (Left to right)
+                                     ______________________________________________________________________________________________________
+                                    I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+                                    I------------------------------------------------------------------------------------------------------I
+
+
+                *** If we want to do the opposite, we can use the COPARISON OPERATOR ' < ' less than. (database line 22-29)
+                            SELECT *
+                            FROM First_Squad
+                            WHERE number < 6;
+
+                        ***** The query above, will return this
+                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                    I------------------------------------------------------------------------------------------------------I
+                                    I    2            I           Navas              I             Keeper             I         1          I
+                                    I------------------------------------------------------------------------------------------------------I
+                                    I    3            I           Bale               I             Right-Wing         I         5          I
+                                    I______________________________________________________________________________________________________I
+
+
+
+                *** Now let's use COPARISON OPERATOR ' >= '  greater than or equal  to find all players with number >= 6. (database line 22-29)
+
+                                            SELECT *
+                                            FROM First_Squad
+                                            WHERE number >= 6;     <-- if we had a player with number 6 in our database, it would also be included in return.
+
+                        ***** The query above, will return this
+
+                                                                      id                      player                      position                    number               <----Columns (Left to right)
+                                     ______________________________________________________________________________________________________
+                                    I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+                                    I------------------------------------------------------------------------------------------------------I
+
+
+                *** Let's use COPARISON OPERATOR ' <= ' less than or equal. (database line 22-29)
+
+                                            SELECT *
+                                            FROM First_Squad
+                                            WHERE number <= 6;    <-- if we had a player with number 6 in our database, it would also be included in return.
+
+
+                        ***** The query above, will return this
+                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                    I------------------------------------------------------------------------------------------------------I
+                                    I    2            I           Navas              I             Keeper             I         1          I
+                                    I------------------------------------------------------------------------------------------------------I
+                                    I    3            I           Bale               I             Right-Wing         I         5          I
+                                    I______________________________________________________________________________________________________I
+
+
+                *** Now let's use the COMPARISON OPERATOR ' < > '  not equal to sign. (database line 22-29)
+                    *** It's the same as ' != '.  This means, I want everything  exept this ___.
+
+                                            SELECT *
+                                            FROM First_Squad
+                                            WHERE player <>  'Bale';   <-- Here we want everything, exept the column that contains ' Bale '
+
+                        ***** The query above, will return this
+                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                     ______________________________________________________________________________________________________
+                                    I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+                                    I------------------------------------------------------------------------------------------------------I
+                                    I    2            I           Navas              I             Keeper             I         1          I
+                                    I------------------------------------------------------------------------------------------------------I
+
+            ** Now, Let's do a query that allow us to get multiple data. For example, Retrieve position with id 1 AND player ' Bale '. (database line 22-29)
+                *** SQL has ' AND ' operator to retrieve data with multiple conditions
+
+                                            SELECT___
+                                            FROM_____
+                                            WHERE____
+                                            AND_______;
+
+                        ***** IMPORTANT!!! When we used AND, all the conditions have to be met, otherwise, we get nothing in return.
+
+                *** Here is an exaple.(database line 22-29)
+
+                                            SELECT position
+                                            FROM First_Squad
+                                            WHERE id = 1
+                                            AND player = 'Bale';
+
+                                    ****** Since there is no data that has  id 1 AND has the name Bale,
+                                                we get nothing in return.
+
+                *** If we do this query.(database line 22-29)
+
+                                            SELECT position
+                                            FROM First_Squad
+                                            WHERE id = 1
+                                            AND player = 'C.Ronaldo';
+
+                                    ***** The query above, will return this
+
+                                            Left-Wing
+
+            ** SQL has an OR operator that allows to do opposite of AND operator. We can match one conditions or the other, and we can still get something in return. (database line 22-29)
+
+                                            SELECT_____
+                                            FROM_______
+                                            WHERE______
+                                            OR__________;
+
+                ***Now, Let's do a query that allow us to get multiple data. For example, Retrieve position with ' id 1 ' OR ' player'  Bale.(database line 22-29)
+                                            SELECT position
+                                            FROM First_Squad
+                                            WHERE id = 1
+                                            OR player = 'Bale'
+
+                                    ***** The query above, will return this
+
+                                            Left-Wing
+                                            Righ-Wing
