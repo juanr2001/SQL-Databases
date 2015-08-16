@@ -39,11 +39,11 @@
 
                                                                 player      <--Columns (Left to right)
                                      ____________
-                                    I  Navas I     <-- rows (Top- bottom)
+                                    I  Navas     I     <-- rows (Top- bottom)
                                     I------------I
-                                    I  Bale     I
+                                    I  Bale      I
                                     I------------I
-                                    I   C.Ronaldo     I
+                                    I  C.Ronaldo I
                                     I____________I
 
 
@@ -64,9 +64,9 @@
                                      ____________
                                     I  C.Ronaldo I     <-- rows (Top- bottom)
                                     I------------I
-                                    I  Bale     I
+                                    I  Bale      I
                                     I------------I
-                                    I   Navas     I
+                                    I   Navas    I
                                     I____________I
 
             *** Using DESC will display data in decending order. (Highest to Smallest)
@@ -96,10 +96,10 @@
 
                         ***** The query above, will return this
 
-                                                                      id                      player                      position                    number               <----Columns (Left to right)
-                                     ______________________________________________________________________________________________________
-                                    I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
-                                    I------------------------------------------------------------------------------------------------------I
+                                        id                      player                      position                    number               <----Columns (Left to right)
+                                     ________________________________________________________________________________________________
+                                    I    1            I     C.Ronaldo          I             Left-Wing          I         7          I
+                                    I------------------------------------------------------------------------------------------------I
 
 
                 *** If we want to do the opposite, we can use the COPARISON OPERATOR ' < ' less than. (database line 22-29)
@@ -108,7 +108,7 @@
                             WHERE number < 6;
 
                         ***** The query above, will return this
-                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                         id                      player                           position                   number               <----Columns (Left to right)
                                     I------------------------------------------------------------------------------------------------------I
                                     I    2            I           Navas              I             Keeper             I         1          I
                                     I------------------------------------------------------------------------------------------------------I
@@ -125,7 +125,7 @@
 
                         ***** The query above, will return this
 
-                                                                      id                      player                      position                    number               <----Columns (Left to right)
+                                         id                      player                           position                    number               <----Columns (Left to right)
                                      ______________________________________________________________________________________________________
                                     I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
                                     I------------------------------------------------------------------------------------------------------I
@@ -139,7 +139,7 @@
 
 
                         ***** The query above, will return this
-                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                         id                      player                         position                    number               <----Columns (Left to right)
                                     I------------------------------------------------------------------------------------------------------I
                                     I    2            I           Navas              I             Keeper             I         1          I
                                     I------------------------------------------------------------------------------------------------------I
@@ -155,7 +155,7 @@
                                             WHERE player <>  'Bale';   <-- Here we want everything, exept the column that contains ' Bale '
 
                         ***** The query above, will return this
-                                                                        id                      player                      position                    number               <----Columns (Left to right)
+                                       id                      player                            position                    number               <----Columns (Left to right)
                                      ______________________________________________________________________________________________________
                                     I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
                                     I------------------------------------------------------------------------------------------------------I
