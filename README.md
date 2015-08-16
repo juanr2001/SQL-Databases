@@ -10,3 +10,6 @@ This are the list of the tutorial, starting from the oldest(beginners) to new(ex
 
 #####how_to_interact_with_SQL - 
   Explained the proccess when we make a request on a browser. Introduced SELECT FROM WHERE; statements. Gave examples   on how to retrieve data from database using this statement.
+  
+#####special_data_retrieval
+  Explained how to retrieve sorted data using 'ORDER BY' and 'ORDER BY __ DESC'. Used 'AND, OR, >, <, <=, >=, < >, and = '. I wrote some example that will teach you how to make a query with each operators efficiently.
