@@ -1,0 +1,140 @@
+- This file will explain how to add data to a current table.
+
+- We are going to be working with the same database as in the previous files in the Repository:
+
+
+        ** Our Dadabase is called Real-Madrid-DB
+        ** Our table is called 'First_Squad'
+
+        ** Here is the database table we are going to be working with
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+
+- First, let's pretend that Real Madrid bought a new player from FC Manchester United.
+        Player: J. Mata
+        Position: Mid-fielder
+        Number: 14
+
+
+    * Our job is to add the player about to the database table.
+
+        ** To add new information to database table we use
+
+                INSERT INTO_____ (_______)
+                VALUES (___________);
+
+
+            -This is what the information it should go in the blank spaces:
+
+                INSERT INTO ' table ' (the column/colums we want to add the new information)
+                VALUES (the data/values we want to add, separated by commas);
+
+                -A better way to understand
+
+                INSERT INTO ' table-name ' (column name)
+                VALUES (data to add);
+
+    * Now that we know the syntax to insert data, let add the player located in line 22-24 to our table
+                id: 4
+                Player: J. Mata
+                Position: Mid-fielder
+                Number: 14
+
+                INSERT INTO First_Squad (id, player, position, number) <---DOES NOT matter the order of how you write the columns,
+                VALUES (4, 'J. Mata', 'Mid-fielder', 14);                              <--- but it has to match the order of the values, like shown here. Don't forget quotatios!!!
+
+        ** The table below show the player added, after we wrote the code above.
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            |-------------------------------------------------------------------------------------------------------I
+            I    4            I           J. Mata           I            Mid-fielder           I        14         I
+            I______________________________________________________________________________________________________I
+
+
+        ** An easier way to add the same data as shown in line 51-52
+
+                INSERT INTO First_Squad                                 <-- We don't have to right the columns name here,
+                VALUES (4, 'J. Mata', 'Mid-fielder', 14);               <-- but still has to match the order of the column with the data we want to add, like is shown here.
+
+
+    * What if Real Madrid buys another player from FC Manchester United, but Real Madrid is unsure of what number the player will have in the team.
+
+        ** Let's add this player to the database table:
+
+            id: 4
+            Player: Jones
+            Position: Defense
+
+           - The player above does not have a number, so we will have an empty row for the ' number column '.
+
+            *** SQL allows to add data to columns even when it does not contained data to insert in rows.
+
+
+                INSERT INTO First_Squad (id, player, position)
+                VALUES (4, 'Jones', 'Defense');
+
+        ** The table below show the player added, after we wrote the code above.
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            |-------------------------------------------------------------------------------------------------------I
+            I    4            I           J. Mata           I            Mid-fielder           I        14         I
+            |-------------------------------------------------------------------------------------------------------I
+            I    5            I           Jones           I            Defense           I                 I
+            I______________________________________________________________________________________________________I
+
+
+    * Real Madrid has a lot of money, so they decided to buy another player from FC Inter Milan, but the player can play two positions. Real Madrid is unsure where the new player will play in the field yet.
+        ** Let's add this player to the database table:
+
+            Player: Rooney
+            Number: 10
+
+                INSERT INTO First_Squad(player, number)
+                VALUES ('Rooney', 10);
+
+
+        ** The table below show the player added, after we wrote the code above.
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            |-------------------------------------------------------------------------------------------------------I
+            I    4            I           J. Mata           I            Mid-fielder           I        14         I
+            |-------------------------------------------------------------------------------------------------------I
+            I    5            I           Jones           I            Defense           I                 I
+            |-------------------------------------------------------------------------------------------------------I
+            I    6            I           Rooney           I                       I        10         I
+            I______________________________________________________________________________________________________I
+
+
+            *** WHERE DID ' ID 6 ' CAME FROM??!!!! We did not write it in our code!
+
+                - SQL has what is call Primary Keys, they are UNIQUE!
+                - SQL generates and increment automatically ' id ' when we insert new row (of data) in the table.
+                -  SQL adds data where there is NO data for a field
+                    - NULL value is used to represent a field with NO data.
+                    - NULL values is used as a placeholder for unknown data. (In other words, if the field is optional, we decide to make it empty.)
