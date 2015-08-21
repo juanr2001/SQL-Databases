@@ -15,4 +15,7 @@ This are the list of the tutorial, starting from the oldest(beginners) to new(ex
   Explained how to retrieve sorted data using 'ORDER BY' and 'ORDER BY __ DESC'. Used 'AND, OR, >, <, <=, >=, < >, and = '. I wrote some example that will teach you how to make a query with each operators efficiently.
 
 #####inserting_data_to_database
-  Exmplained how to add data to an existing database using 'INSERT INTO __(__) VALUES ();' statement. Examples are given to practice on your own. PRACTICE MAKES PERFECT! 
+  Explained how to add data to an existing database using 'INSERT INTO __(__) VALUES ();' statement. Examples are given to practice on your own. PRACTICE MAKES PERFECT! 
+
+#####updating_changing_data
+  Explained how to UPDATE data from your database. I used a simple databse, so you can undestand it easily.
