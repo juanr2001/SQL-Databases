@@ -32,9 +32,9 @@
 
         ** Here is the Syntax
 
-            UPDATE ____                             <-- here we write the Name of the Table, which is "first_squads'
+            UPDATE ____                       <-- here we write the Name of the Table, which is "first_squads'
             SET______ = _______               <-- first line - we write Column name,   =    , second line - the new name for the row, located in that column.
-            (WHERE clause)                          <-- this is optional, but it's IMPORTANT, it helps target where the exact place we want to change, if there is NO ' WHERE ' the column will be update for ALL rows
+            (WHERE clause)                    <-- this is optional, but it's IMPORTANT, it helps target where the exact place we want to change, if there is NO ' WHERE ' the column will be update for ALL rows
 
 
 
@@ -55,7 +55,7 @@
             I------------------------------------------------------------------------------------------------------I
             I    2            I           Navas              I             Keeper             I         1          I
             I------------------------------------------------------------------------------------------------------I
-            I    3            I           Gareth               I             Right-Wing         I         5          I
+            I    3            I           Gareth               I             Right-Wing         I         5        I
             I______________________________________________________________________________________________________I
 
 
@@ -79,9 +79,9 @@
              ______________________________________________________________________________________________________
             I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
             I------------------------------------------------------------------------------------------------------I
-            I    2            I           Casillas              I             Keeper             I         12          I
+            I    2            I           Casillas              I             Keeper             I         12      I
             I------------------------------------------------------------------------------------------------------I
-            I    3            I           Gareth               I             Right-Wing         I         5          I
+            I    3            I           Gareth               I             Right-Wing         I         5        I
             I______________________________________________________________________________________________________I
 
 
