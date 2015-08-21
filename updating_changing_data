@@ -1,0 +1,117 @@
+- This file will teach you how to change data that is already store in the database.
+
+    - If you read the past file, then you should already know How...
+
+        - Databases work
+        - Interact with data
+        - To Add Data to Databases
+        - To Retrieve Data  from Databases
+
+
+
+- Now, let's update Databases. Again we are going to be using the same Database we've been using
+
+        ** Our Dadabase is called Real-Madrid-DB
+        ** Our table is called 'first_squads'
+
+        ** Here is the database table we are going to be working with
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+
+    * To update data in our database, there is a statement in SQL called
+
+            UPDATE
+
+        ** Here is the Syntax
+
+            UPDATE ____                             <-- here we write the Name of the Table, which is "first_squads'
+            SET______ = _______               <-- first line - we write Column name,   =    , second line - the new name for the row, located in that column.
+            (WHERE clause)                          <-- this is optional, but it's IMPORTANT, it helps target where the exact place we want to change, if there is NO ' WHERE ' the column will be update for ALL rows
+
+
+
+- Let' s write CODE
+
+    * In our Table above (line 18 - 26), we want to change the name of the player to Gareth...
+
+            UPDATE first_squads
+            SET player = 'Gareth'
+            WHERE id = 3;
+
+
+            This is our new table after we UPDATED the Database
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Gareth               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+
+            **** As you see about (line 58), the name was updated to Gareth
+
+
+
+
+    * SQL allows to change multiple Columns at once.
+
+        ** Let's change the player Navas and his number (1)
+
+            UPDATE first_squads
+            SET player = 'Casillas', number = 12
+            WHERE id = 2;
+
+
+             This is our new table after we UPDATED the Database
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Casillas              I             Keeper             I         12          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Gareth               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+
+            **** As you see about (line 82), the Player and name were updated to Casillas and 12
+
+
+    * SQL allows to changes multiple ROWS at once!!!!!!
+
+        **Let's change if player position, for two players at ONCE
+
+            UPDATE first_squads
+            SET position = 'Forward'
+            WHERE id = 1 OR id = 3
+
+
+             This is our new table after we UPDATED the Database
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Forward          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Casillas              I             Keeper             I         12          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Gareth               I             Forward         I         5          I
+            I______________________________________________________________________________________________________I
+
+           **** As you see about (line 104 and 108), the position was UPDATE for two players at once.
+
+
+    * IMPORTANT:
+
+        - You can pass as many  OR  statements as you want and need
+
