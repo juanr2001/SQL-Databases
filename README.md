@@ -19,3 +19,7 @@ This are the list of the tutorial, starting from the oldest(beginners) to new(ex
 
 #####updating_changing_data
   Explained how to UPDATE data from your database. I used a simple databse, so you can undestand it easily.
+  
+#####delete_data
+  Explained how to use DELETE statement doing a query and also using comparators when deleting multiple
+  rows. Becareful using DELETE statement. Can be bad if you don't do it the write way. Always check twice.
