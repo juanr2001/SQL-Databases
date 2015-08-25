@@ -1,0 +1,61 @@
+DELETE DATA
+
+        ** Our table is called 'team_players'
+
+        ** Here is the database table we are going to be working with
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I------------------------------------------------------------------------------------------------------I
+            I    3            I           Bale               I             Right-Wing         I         5          I
+            I______________________________________________________________________________________________________I
+
+        - Let's start by deleting ' Bale ' from the database.
+
+            -To accomplish a deletion we user the following statement...
+
+                        DELETE FROM_____(WHERE clause);      #<-- On the blank space, we specify the table.
+                                                                                              #<-- In the WHERE condition. we write the specific place we'd like to change
+
+                        - DELETE removes the rows from the table depending on the conditions we write on the WHERE clause
+
+            - Now, let's DELETE ' Bale ' from our database...
+
+                        DELETE FROM "team_playes" WHERE id = 3;
+
+                        - The query above will delete the entire row with id = 3. The table should look like this after the query...
+
+                                            id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I------------------------------------------------------------------------------------------------------I
+            I    2            I           Navas              I             Keeper             I         1          I
+            I______________________________________________________________________________________________________I
+
+
+        - YOU HAVE TO BE CAREFUL USING DELETE STATEMENT!!!!!
+
+            - If you do the following query 'without' the WHERE clause ...
+
+                        DELETE FROM team_players;
+
+                        - This will delete all the data from the database, and you will not be able to recover it. CAREFUL
+
+
+        - SQL allows you do different stuff; we can use coparason operators to delete multiple rows
+
+            - Let's say we want to DELETE data that is ' less than ' 6... let's do the query...
+
+                        DELETE FROM team_players WHERE number < 6;
+
+                        - The query above, will delete the rows with id = 2, and id = 3...Out table now will look like this
+
+                    id                      player                      position                    number               <----Columns (Left to right)
+             ______________________________________________________________________________________________________
+            I    1            I           C.Ronaldo          I             Left-Wing          I         7          I
+            I______________________________________________________________________________________________________I
+
+- Becareful when performing deletions =)
